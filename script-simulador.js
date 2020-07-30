@@ -25,7 +25,7 @@ let exercicios = [
     'abd borboleta',
     'salto + jab + direto',
     'salto + dubau',
-    'jab + direto + gancho',
+    'jab + direto + jab',
     'jab + direto + upper',
     'dolio + joelhada',
     'jab + direto + joelhada',
@@ -62,7 +62,7 @@ function simular(){
             resultado.innerHTML = ''
         }else {
             for (let cont = 0; cont < num; cont++ ){
-                let item = Math.floor(Math.random() *exercicios.length )
+                let item = Math.floor(Math.random() * exercicios.length )
                 let concat = exercicios[item]
                 resultado.innerHTML += `<p>${cont+1}ª  estação:  ${concat}</p>`
             }

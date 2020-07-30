@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css-simulador.css">
 </head>
 <body>
+    
     <header>
-        <luta>SIMULADOR DE AULAS<br>de luta em circuito</p>
+        <h1>SIMULADOR DE AULAS de luta em circuito</h1>
     </header>
     <section>
         <div id="texto">
@@ -17,14 +18,16 @@
             </p>
         </div>
         <div id="contagem">
-            <p>Digite o número de estações: <input type="number" name="estacao" id="estacao" required min="1" max="30"> <input type="submit" value="Gerar" onclick="simular()"></p>   
+            <p>Digite o número de estações: </p>
+            <input type="number" name="estacao" id="estacao" required min="1" max="30"> 
+            <input id="btn" type="submit" value="Gerar" onclick="simular()">   
          </div>
          <div id="resultado">
              <p>O resultado será apresentado aqui...</p>
          </div>
     </section>
     <footer>
-        <p> Gu.Escudeiro.Dev &copy;</p>
+        <h1> GuEscudeiro.Dev &copy;</h1>
     </footer>
     <script type="text/javascript" src="script-simulador.js"></script>
 </body>

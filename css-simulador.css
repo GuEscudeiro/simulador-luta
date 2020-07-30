@@ -1,31 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
     background-image: url('luta.webp');
     background-repeat: no-repeat;
-    font-family: 'Black Ops One', cursive;
-    background-attachment: fixed;
-    background-position: center center;
+    background-position: top;
 }
-p {
-    font-family: 'Black Ops One', cursive;
+
+@media (max-width: 320px){
+    body {
+       margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 /* ------------------------------------------------*/
 header {
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
     color: rgb(40, 92, 35);
-    font-family: 'Black Ops One', cursive;
-    font-size: 48pt;
-    font-style: italic;
     text-align: center;
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+header h1 {
+    font-weight: 100;
+    font-size: 4rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Black Ops One', cursive;
+}
+
+/* Responsividade Header */
+@media (max-width: 900px){
+    header {
+        align-items: center;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+}
+@media (max-width: 700px){
+    header {
+        align-items: center;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 320px){
+    header {
+        align-items: center;
+    }
 }
 /*-------------------------------------------------*/
 section {
     background: transparent;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
     padding: 15px;
-    width: 790px;
+    width: 95%;
     margin: auto;
+    padding: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
 }
 div#texto {
@@ -35,29 +81,163 @@ div#texto {
 div#texto p {
     color: rgb(40, 92, 35);
     font-family: 'Black Ops One', cursive;
-    font-size: 20pt;
+    font-size: 1.7rem;
     text-align: center;
     text-shadow: 1px 1px 3px rgb(59, 59, 59);
 }
 div#contagem {
     margin-top: 10px;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18pt;
     text-shadow: 1px 1px 3px rgb(124, 124, 124);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
+div#contagem p {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.7rem;
+    text-align: center;
+}
+input#estacao {
+    width: 100px;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+}
+input#btn {
+    border: none;
+    background-color: #388538;
+    color: #ffffff;
+    border-radius: 3px;
+    width: 60px;
+    height: 20px;
+    font-family: 'Black Ops One', cursive;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+input#btn:hover {
+    background-color: #255825;
+}
+
 div#resultado {
     margin-top: 15px;
-    width: 780px;
+    width: 80%;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18pt;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    
+}
+div#resultado p {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 3px rgb(124, 124, 124);
+    line-height: 1.8;
+}
+
+/* Responsividade Section */
+@media (max-width: 900px){
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+    div#contagem p {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 450px) and (max-width: 700px) {
+    section {
+        align-items: center;
+        width: 95%;
+    }
+    div#contagem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input#estacao, input#btn {
+        margin-top: 10px;
+    }
+    
+    div#resultado {
+        line-height: 20px;
+    }
+    div#resultado p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
+@media (min-width: 320px) and (max-width: 450px) {
+    section {
+        align-items: center;
+        width: 90%;
+    }
+    div#texto p {
+        font-size: 1rem;
+    }
+    div#contagem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input#estacao, input#btn {
+        margin-top: 10px;
+    }
+    div#contagem p {
+        font-size: 0.7rem;
+    }
+    div#resultado {
+        align-items: flex-start;
+        line-height: 20px;
+    }
+    div#resultado p {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
 }
 /*--------------------------------------------------*/
 footer {
-color: rgb(0, 0, 0);
-text-align: center;
-font-style: italic;
-text-shadow: 1px 1px 2px rgb(128, 128, 128);
+    display: flex;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+footer h1 {
+    font-family: 'Black Ops One', cursive;
+    font-weight: 100;
+    font-size: 1rem;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px rgb(128, 128, 128);
+}
+@media (max-width: 900px){
+    footer {
+        justify-content: center;
+    }
+    footer h1 {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 700px){
+    footer {
+        justify-content: center;
+    }
+    footer h1 {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 320px){
+    footer h1 {
+        font-size: 0.6rem;
+        margin-top: 10px;
+    }
 }
